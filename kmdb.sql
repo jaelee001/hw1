@@ -84,23 +84,58 @@ CREATE TABLE directors (
     name TEXT
 );
 
-CREATE TABLE actors (
+CREATE TABLE roles (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT
 );
 
 CREATE TABLE castings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    actor_id INTEGER,
+    role_id INTEGER,
     movie_id INTEGER,
-    role TEXT
+    actor TEXT
 );
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
+INSERT INTO movies (title, year, rating)
+VALUES ("Batman Begins", "2005", "PG-13");
+INSERT INTO movies (title, year, rating)
+VALUES ("The Dark Knight", "2008", "PG-13");
+INSERT INTO movies (title, year, rating)
+VALUES ("The Dark Knight Rises", "2012", "PG-13");
 
+INSERT INTO directors (name)
+VALUES ("Christopher Nolan");
 
+INSERT INTO roles (name)
+VALUES ("Bruce Wayne");
+INSERT INTO roles (name)
+VALUES ("Alfred");
+INSERT INTO roles (name)
+VALUES ("Ra's Al Ghul");
+INSERT INTO roles (name)
+VALUES ("Rachel Dawes");
+INSERT INTO roles (name)
+VALUES ("Commissioner Gordon");
+INSERT INTO roles (name)
+VALUES ("Joker");
+INSERT INTO roles (name)
+VALUES ("Harvey Dent");
+INSERT INTO roles (name)
+VALUES ("Bane");
+INSERT INTO roles (name)
+VALUES ("John Blake");
+INSERT INTO roles (name)
+VALUES ("Selina Kyle");
+
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("1", "1", "Christian Bale");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("1", "2", "Christian Bale");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("1", "3", "Christian Bale");
 
 -- Prints a header for the movies output
 .print "Movies"
