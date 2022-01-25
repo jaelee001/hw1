@@ -99,12 +99,12 @@ CREATE TABLE castings (
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
-INSERT INTO movies (title, year, rating)
-VALUES ("Batman Begins", "2005", "PG-13");
-INSERT INTO movies (title, year, rating)
-VALUES ("The Dark Knight", "2008", "PG-13");
-INSERT INTO movies (title, year, rating)
-VALUES ("The Dark Knight Rises", "2012", "PG-13");
+INSERT INTO movies (title, year, rating, director_id)
+VALUES ("Batman Begins", "2005", "PG-13", "1");
+INSERT INTO movies (title, year, rating, director_id)
+VALUES ("The Dark Knight", "2008", "PG-13", "1");
+INSERT INTO movies (title, year, rating, director_id)
+VALUES ("The Dark Knight Rises", "2012", "PG-13", "1");
 
 INSERT INTO directors (name)
 VALUES ("Christopher Nolan");
@@ -136,6 +136,31 @@ INSERT INTO castings (roles.role_id, movies.movie_id, actor)
 VALUES ("1", "2", "Christian Bale");
 INSERT INTO castings (roles.role_id, movies.movie_id, actor)
 VALUES ("1", "3", "Christian Bale");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("2", "1", "Michael Caine");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("2", "2", "Michael Caine");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("3", "1", "Liam Neeson");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("4", "1", "Katie Holmes");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("4", "2", "Maggie Gyllenhaal");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("5", "1", "Gary Oldman");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("5", "3", "Gary Oldman");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("6", "2", "Heath Ledger");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("7", "2", "Aaron Eckhart");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("8", "3", "Tom Hardy");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("9", "3", "Joseph Gordon-Levitt");
+INSERT INTO castings (roles.role_id, movies.movie_id, actor)
+VALUES ("10", "3", "Anne Hathaway");
+
 
 -- Prints a header for the movies output
 .print "Movies"
