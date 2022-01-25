@@ -68,6 +68,10 @@
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS directors;
+DROP TABLE IF EXISTS roles;
+DROP TABLE IF EXISTS castings;
 
 -- Create new tables, according to your domain model
 -- TODO!
