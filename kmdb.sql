@@ -173,6 +173,7 @@ VALUES ("10", "3", "Anne Hathaway");
 
 -- The SQL statement for the movies output
 -- TODO!
+.width 30 5 5 30
 SELECT movies.title, movies.year, movies.rating, directors.name
 FROM directors INNER JOIN movies ON movies.director_id = directors.id
 WHERE directors.name = "Christopher Nolan";
@@ -186,6 +187,7 @@ WHERE directors.name = "Christopher Nolan";
 
 -- The SQL statement for the cast output
 -- TODO!
+.width 30 30 30
 SELECT movies.title, castings.actor, roles.name
 FROM ((castings
 INNER JOIN movies ON movies.id = castings.movie_id
